@@ -1,0 +1,44 @@
+.root[data-variant='light'] {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+[data-mantine-color-scheme='light'] .root[data-active='true'][data-variant='light'] {
+  box-shadow: inset 3px 0 0 var(--mantine-primary-color-6);
+  background-color: var(--mantine-color-gray-1);
+}
+[data-mantine-color-scheme='dark'] .root[data-active='true'][data-variant='light'] {
+  box-shadow: inset 3px 0 0 var(--mantine-primary-color-3);
+  background-color: var(--mantine-color-dark-8);
+}
+[data-mantine-color-scheme='light'] .root[data-variant='light']:hover {
+  background-color: var(--mantine-primary-color-0);
+}
+[data-mantine-color-scheme='dark'] .root[data-variant='light']:hover {
+  background-color: var(--mantine-color-cadet-7);
+}
+[data-mantine-color-scheme='light'] .root[data-active='true'][data-variant='light'] .label {
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .root[data-active='true'][data-variant='light'] .label {
+  color: var(--mantine-primary-color-3);
+}
+[data-mantine-color-scheme='light'] .root[data-variant='light']:hover .label {
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .root[data-variant='light']:hover .label {
+  color: var(--mantine-primary-color-3);
+}
+
+[data-mantine-color-scheme='light'] .root[data-active='true'][data-variant='light'] .section {
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .root[data-active='true'][data-variant='light'] .section {
+  color: var(--mantine-primary-color-3);
+}
+
+[data-mantine-color-scheme='light'] .root[data-variant='light']:hover .section {
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .root[data-variant='light']:hover .section {
+  color: var(--mantine-primary-color-3);
+}

@@ -1,0 +1,110 @@
+.selected.button:hover {
+    color: var(--mantine-color-text) !important;
+}
+
+.group {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0;
+    border: none !important;
+    border-radius: 9999px;
+    background: none;
+}
+
+.button {
+    border-radius: 0;
+    border: none !important;
+    margin-right: 0;
+
+    /* Divider for vertical separation */
+    .divider {
+        width: 1px;
+        background: var(--mantine-color-idexx-blue-2);
+        align-self: stretch;
+        margin: 0 0.5rem;
+    }
+}
+
+.button:first-child {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+
+.button:last-child {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    margin-right: 0;
+}
+
+/* Sizes */
+.sm .button {
+    height: 28px;
+    font-size: 12px;
+}
+
+.md .button {
+    height: 34px;
+    font-size: 14px;
+}
+
+.lg .button {
+    height: 45px;
+    font-size: 16px;
+}
+
+/* Selected state */
+.selected {
+    background-color: var(--mantine-color-idexx-blue-6) !important;
+    color: var(--mantine-color-white) !important;
+}
+
+/* Disabled state */
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Icon only */
+.iconOnly {
+    justify-content: center;
+    min-width: 48px;
+}
+
+.sm .iconOnly {
+    padding: 0 8px;
+}
+
+.md .iconOnly {
+    padding: 0 12px;
+}
+
+.lg .iconOnly {
+    padding: 0 16px;
+}
+
+/* Focus, hover, active states */
+.button:focus {
+    outline: 2px solid var(--mantine-primary-color-4);
+    z-index: 1;
+}
+
+[data-mantine-color-scheme="light"] .button:hover:not(:disabled) {
+    background-color: var(--mantine-primary-color-1) !important;
+    border: none !important;
+}
+
+[data-mantine-color-scheme="dark"] .button:hover:not(:disabled) {
+    background-color: var(--mantine-color-cadet-4) !important;
+    border: none !important;
+}
+
+/* Make active identical to hover */
+[data-mantine-color-scheme="light"] .button:active:not(:disabled) {
+    background-color: var(--mantine-primary-color-1) !important;
+    border: none !important;
+}
+
+[data-mantine-color-scheme="dark"] .button:active:not(:disabled) {
+    background-color: var(--mantine-color-cadet-4) !important;
+    border: none !important;
+}

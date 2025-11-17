@@ -1,0 +1,6 @@
+.phoneInput {
+  border-radius: var(--mantine-radius-sm) !important;
+}
+.phoneInput::placeholder {
+  font-size: 0.875rem !important; /* Mantine 'sm' size */
+}

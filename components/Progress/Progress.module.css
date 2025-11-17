@@ -1,0 +1,8 @@
+.root {
+    [data-mantine-color-scheme="light"] & {
+        background-color: var(--mantine-primary-color-2);
+    }
+    [data-mantine-color-scheme="dark"] & {
+        background-color: var(--mantine-color-cadet-4); 
+    }
+}

@@ -1,0 +1,17 @@
+[data-mantine-color-scheme='light'] .tabsTab[data-variant='default']:hover {
+  background-color: var(--mantine-primary-color-0);
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .tabsTab[data-variant='default']:hover {
+  background-color: var(--mantine-color-cadet-5);
+  color: var(--mantine-primary-color-3);
+}
+[data-mantine-color-scheme='light'] .tabsTab[data-active='true'] {
+  background-color: var(--mantine-color-gray-0);
+  color: var(--mantine-primary-color-6);
+}
+[data-mantine-color-scheme='dark'] .tabsTab[data-active='true'] {
+  background-color: var(--mantine-color-dark-8);
+  color: var(--mantine-primary-color-3);
+  border-bottom-color: var(--mantine-primary-color-3);
+}

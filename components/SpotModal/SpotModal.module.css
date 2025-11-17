@@ -1,0 +1,38 @@
+/* Copied from CustomModal.module.css */
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  [data-mantine-color-scheme='light'] & {
+    background: var(--mantine-color-gray-1);
+  }
+  [data-mantine-color-scheme='dark'] & {
+    background: var(--mantine-color-dark-6);
+  }
+}
+
+.footer .left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer .right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content {
+  padding-bottom: 72px; /* Adjust to match footer height */
+}
+
+.contentNoFooter {
+  padding-bottom: 0;
+}

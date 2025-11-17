@@ -1,0 +1,21 @@
+.control {
+  border: none;
+    [data-mantine-color-scheme="light"] &:hover {
+    background-color: var(--mantine-color-gray-2);
+    }
+    [data-mantine-color-scheme="dark"] &:hover {
+    background-color: var(--mantine-color-dark-8); 
+    }
+}
+.root {
+    [data-mantine-color-scheme="light"] & {
+    --pagination-active-bg: var(--mantine-primary-color-1);
+    
+  }
+    [data-mantine-color-scheme="dark"] & {
+    --pagination-active-bg: var(--mantine-color-cadet-4); 
+    }
+}  
+.control[data-active="true"] {
+  --pagination-active-color: var(--mantine-color-text);
+}

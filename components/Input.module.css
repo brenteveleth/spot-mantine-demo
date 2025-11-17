@@ -1,0 +1,22 @@
+/* https://help.mantine.dev/q/input-focus-styles */
+
+.input {
+  &:focus-within {
+    outline: rem(1px) solid var(--mantine-primary-color-filled);
+  }
+  [data-mantine-color-scheme="light"] &:focus-within {
+    background-color: var(--mantine-color-gray-0) !important;
+    border-color: var(--mantine-primary-color-6) !important;
+  }
+  [data-mantine-color-scheme="light"] & {
+    border-color: var(--mantine-color-dark-1) !important;
+  }
+  [data-mantine-color-scheme="dark"] &:focus-within {
+    background-color: var(--mantine-color-dark-8) !important;
+    border-color: var(--mantine-primary-color-6) !important;
+  }
+  [data-mantine-color-scheme="dark"] & {
+    border-color: var(--mantine-color-gray-6) !important;
+    background-color: var(--mantine-color-dark-7) !important;
+  }
+}

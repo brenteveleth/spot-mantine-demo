@@ -1,0 +1,27 @@
+
+.icon {
+  [data-mantine-color-scheme="light"] & {
+    color: var(--mantine-primary-color-6) !important;
+    outline: 2px solid var(--mantine-primary-color-6) !important;
+    border-radius: 100% !important;
+  }
+}
+.icon {
+  [data-mantine-color-scheme="dark"] & {
+    color: var(--mantine-primary-color-5) !important;
+    outline: 2px solid var(--mantine-primary-color-5) !important;
+    border-radius: 100% !important;
+  }
+}
+
+.radio {
+  [data-mantine-color-scheme="light"] & {
+    border-color: var(--mantine-color-gray-5) !important;
+  }
+}
+.radio {
+  [data-mantine-color-scheme="dark"] & {
+    border-color: var(--mantine-color-gray-7) !important;
+  }
+
+}
