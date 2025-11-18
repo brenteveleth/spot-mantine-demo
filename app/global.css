@@ -6,3 +6,36 @@
   font-weight: 400;
   font-family: 'Sora', 'Roboto', sans-serif;
 }
+
+/* Add light and dark mode border adjustments */
+:root {
+  --border-color-light: #e0e0e0;
+  /* Lighter border for light mode */
+  --border-color-dark: #4a4a4a;
+  /* Darker border for dark mode */
+}
+
+html[data-theme='light'] {
+  --border-color: var(--border-color-light);
+}
+
+html[data-theme='dark'] {
+  --border-color: var(--border-color-dark);
+}
+
+/* Adjust padding for sidebar and main content */
+.sidebar {
+  padding-top: 1rem !important;
+  overflow-y: auto;
+}
+
+.main-content {
+  padding-top: 6rem !important;
+  padding-left: 18rem !important;
+  padding-right: 4rem !important;
+}
+
+.mantine-AppShell-header {
+  box-shadow: var(--mantine-shadow-sm) !important;
+  /* Keep small drop shadow */
+}

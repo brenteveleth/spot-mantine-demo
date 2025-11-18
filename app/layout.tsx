@@ -11,8 +11,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Get color scheme from MantineProvider (default to light)
+  // This is a static assignment for now, but can be made dynamic if needed
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en" {...mantineHtmlProps} data-theme="light">
       <head>
         <ColorSchemeScript defaultColorScheme="auto" forceColorScheme="light" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

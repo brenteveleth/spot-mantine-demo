@@ -179,7 +179,7 @@ export default function HomePage() {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Main className="main-content">
+      <AppShell.Main>
         <Grid>
           <Grid.Col span={12} pl={240} pr={240}>
             <Text mt="sm" c="dimmed">
