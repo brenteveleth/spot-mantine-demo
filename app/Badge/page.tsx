@@ -1,5 +1,19 @@
+'use client';
+
 import { IconCalendar } from '@tabler/icons-react';
-import { Box, Divider, Group, Space, Text, Title } from '@mantine/core';
+import {
+  Alert,
+  Avatar,
+  Box,
+  Card,
+  Divider,
+  Flex,
+  Group,
+  Indicator,
+  Space,
+  Text,
+  Title,
+} from '@mantine/core';
 import { Badge } from '../../components/Badge/Badge';
 import ComponentsDemoLayout from '../components-demo-layout';
 
@@ -206,7 +220,68 @@ export default function BadgeDemo() {
             leftSection={<IconCalendar size={16} />}
           ></Badge>
         </Group>
+        <Space h="lg" />
+        <Group>
+          <Box p="md">
+            <Indicator size={12} withBorder position="bottom-end" offset={4}>
+              <Avatar
+                size="sm"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Box>
+          <Box p="md">
+            <Indicator size={14} withBorder position="bottom-end" offset={6}>
+              <Avatar
+                size="md"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Box>
+          <Box p="md">
+            <Indicator size={16} withBorder position="bottom-end" offset={8}>
+              <Avatar
+                size="lg"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Box>
+          <Card radius="md" withBorder shadow="md">
+            <Indicator size={16} withBorder position="bottom-end" offset={4}>
+              <Avatar
+                size="sm"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Card>
+          <Card radius="md" withBorder shadow="md">
+            <Indicator size={16} withBorder position="bottom-end" offset={6}>
+              <Avatar
+                size="md"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Card>
+          <Card p="md" radius="md" withBorder shadow="md">
+            <Indicator size={16} withBorder position="bottom-end" offset={8}>
+              <Avatar
+                size="lg"
+                radius="pill"
+                src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+              />
+            </Indicator>
+          </Card>
+        </Group>
       </Box>
+      <Alert mt="xl" title="Note" color="orange">
+        Indictor is a separate component; for simplicy, I'd suggest we keep it separate from Badge.
+        Changing the border color of Indicator is proiving difficult.
+      </Alert>
     </ComponentsDemoLayout>
   );
 }
