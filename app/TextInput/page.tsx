@@ -1,4 +1,4 @@
-import { Box, Text, Title } from '@mantine/core';
+import { Box, Divider, Space, Text, TextInput, Title } from '@mantine/core';
 import ComponentsDemoLayout from '../components-demo-layout';
 
 export default function TextInputDemo() {
@@ -8,7 +8,12 @@ export default function TextInputDemo() {
       <Text size="md" mt="xs" color="dimmed">
         Description text goes here
       </Text>
-      <Box mt="md"></Box>
+      <Divider my="lg" mb="xl" />
+      <Box mt="md">
+        <TextInput label="First Name" placeholder="Your first name" required w="240px" />
+        <Space h="md" />
+        <TextInput label="Last Name" placeholder="Your last name" required w="240px" />
+      </Box>
     </ComponentsDemoLayout>
   );
 }

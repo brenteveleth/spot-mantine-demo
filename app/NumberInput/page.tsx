@@ -1,4 +1,4 @@
-import { Box, Text, Title } from '@mantine/core';
+import { Box, Divider, NumberInput, Text, Title } from '@mantine/core';
 import ComponentsDemoLayout from '../components-demo-layout';
 
 export default function NumberInputDemo() {
@@ -8,7 +8,16 @@ export default function NumberInputDemo() {
       <Text size="md" mt="xs" color="dimmed">
         Description text goes here
       </Text>
-      <Box mt="md"></Box>
+      <Divider my="lg" mb="xl" />
+      <Box mt="md">
+        <NumberInput
+          label="The Most Metal Number"
+          description="Enter a number that rocks"
+          defaultValue={666}
+          mt="lg"
+          w="240px"
+        />
+      </Box>
     </ComponentsDemoLayout>
   );
 }

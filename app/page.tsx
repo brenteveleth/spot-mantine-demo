@@ -35,6 +35,7 @@ import {
   PasswordInput,
   PinInput,
   Radio,
+  RadioGroup,
   Select,
   Space,
   Stack,
@@ -48,11 +49,11 @@ import {
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
 import { ActionToggle } from '../components/ActionToggle/ActionToggle';
+import { Badge } from '../components/Badge/Badge';
+import ButtonGroup from '../components/ButtonGroup/ButtonGroup';
 import PhoneNumberInput from '../components/PhoneNumberInput/PhoneNumberInput';
 import { ProgressBar } from '../components/Progress/ProgressBar';
 import { SpotModal } from '../components/SpotModal/SpotModal';
-import { Badge } from '../components/Badge/Badge';
-import ButtonGroup from '../components/ButtonGroup/ButtonGroup';
 
 const states = [
   'Alabama',
@@ -112,9 +113,9 @@ type FormValues = {
 };
 
 export default function HomePage() {
-    // ...existing code...
-    const [singleValue, setSingleValue] = useState('edit');
-    const [multiValue, setMultiValue] = useState<string[]>(['edit']);
+  // ...existing code...
+  const [singleValue, setSingleValue] = useState('edit');
+  const [multiValue, setMultiValue] = useState<string[]>(['edit']);
   const [submittedData, setSubmittedData] = useState<FormValues | null>(null);
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
@@ -132,9 +133,12 @@ export default function HomePage() {
     },
 
     validate: {
-      firstName: (value: string) => (value.length < 2 ? 'First name must have at least 2 letters' : null),
-      lastName: (value: string) => (value.length < 2 ? 'Last name must have at least 2 letters' : null),
-      address: (value: string) => (value.length < 5 ? 'Address must have at least 5 characters' : null),
+      firstName: (value: string) =>
+        value.length < 2 ? 'First name must have at least 2 letters' : null,
+      lastName: (value: string) =>
+        value.length < 2 ? 'Last name must have at least 2 letters' : null,
+      address: (value: string) =>
+        value.length < 5 ? 'Address must have at least 5 characters' : null,
       state: (value: string) => (value === '' ? 'State is required' : null),
     },
   });
@@ -184,7 +188,11 @@ export default function HomePage() {
           <Grid.Col span={12} pl={240} pr={240}>
             <Text mt="sm" c="dimmed">
               This template showcases the integration of{' '}
-              <Anchor href="https://www.soundcloud.com/chanceswithwolves" target="_blank" rel="noopener noreferrer">
+              <Anchor
+                href="https://www.soundcloud.com/chanceswithwolves"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Mantine UI components
               </Anchor>{' '}
               with Next.js, providing a solid foundation for building modern web applications.
@@ -255,9 +263,7 @@ export default function HomePage() {
 
                       <Group justify="space-between" mt="md" mb="xs">
                         <Text fw={500}>Lulu</Text>
-                        <Badge role="info">
-                          New Patient
-                        </Badge>
+                        <Badge role="info">New Patient</Badge>
                       </Group>
 
                       <Text size="sm" c="dimmed">
@@ -281,9 +287,7 @@ export default function HomePage() {
 
                       <Group justify="space-between" mt="md" mb="xs">
                         <Text fw={500}>Scout</Text>
-                        <Badge role="warning">
-                          Overdue
-                        </Badge>
+                        <Badge role="warning">Overdue</Badge>
                       </Group>
 
                       <Text size="sm" c="dimmed">
@@ -330,9 +334,24 @@ export default function HomePage() {
                   <Badge role="primary" size="lg">
                     Done
                   </Badge>
-                  <Badge role="primary" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="primary" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="primary" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="primary"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="primary"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="primary"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
                 <Group>
@@ -352,12 +371,27 @@ export default function HomePage() {
                     Full
                   </Badge>
                   <Badge role="secondary" size="lg">
-                    Full 
+                    Full
                   </Badge>
 
-                  <Badge role="secondary" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="secondary" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="secondary" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="secondary"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="secondary"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="secondary"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
                 <Group>
@@ -380,9 +414,24 @@ export default function HomePage() {
                     Sent
                   </Badge>
 
-                  <Badge role="positive" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="positive" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="positive" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="positive"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="positive"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="positive"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
                 <Group>
@@ -405,9 +454,24 @@ export default function HomePage() {
                     Low
                   </Badge>
 
-                  <Badge role="warning" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="warning" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="warning" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="warning"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="warning"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="warning"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
                 <Group>
@@ -430,9 +494,24 @@ export default function HomePage() {
                     New
                   </Badge>
 
-                  <Badge role="info" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="info" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="info" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="info"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="info"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="info"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
                 <Group>
@@ -455,9 +534,24 @@ export default function HomePage() {
                     Failed
                   </Badge>
 
-                  <Badge role="negative" size="sm" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="negative" size="md" iconOnly leftSection={<IconCalendar size={12} />}></Badge>
-                  <Badge role="negative" size="lg" iconOnly leftSection={<IconCalendar size={16} />}></Badge>
+                  <Badge
+                    role="negative"
+                    size="sm"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="negative"
+                    size="md"
+                    iconOnly
+                    leftSection={<IconCalendar size={12} />}
+                  ></Badge>
+                  <Badge
+                    role="negative"
+                    size="lg"
+                    iconOnly
+                    leftSection={<IconCalendar size={16} />}
+                  ></Badge>
                 </Group>
                 <Space h="lg" />
               </Paper>
@@ -574,7 +668,7 @@ export default function HomePage() {
                       resize="vertical"
                     />
 
-                    <Radio.Group
+                    <RadioGroup
                       name="favoriteBand"
                       label="What's your favorite band?"
                       description="This is anonymous"
@@ -587,7 +681,7 @@ export default function HomePage() {
                         <Radio value="Ministry" label="Ministry" />
                         <Radio value="Fantomas" label="Fantomas" />
                       </Group>
-                    </Radio.Group>
+                    </RadioGroup>
 
                     <Group grow gap="md" mt="xl">
                       <Button variant="default" radius="xl" onClick={() => form.reset()}>
@@ -616,88 +710,218 @@ export default function HomePage() {
               )}
             </Box>
             <Box>
-          <Grid.Col span={12}>
-            <Paper withBorder p="md" mt="lg" radius="md">
-              <Title order={5} mb="md">ButtonGroup Variants</Title>
-              <Stack gap="xl">
-                {/* Single Select (Radio) */}
-                <Box>
-                  <Text mb="xs" fw={700}>Single Select (Radio)</Text>
-                  <ButtonGroup value={singleValue} onChange={val => setSingleValue(typeof val === 'string' ? val : '')} size="md" ariaLabel="Single select group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />}>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-                {/* Multi Select (Checkbox) */}
-                <Box>
-                  <Text mb="xs" fw={700}>Multi Select (Checkbox)</Text>
-                  <ButtonGroup value={multiValue} onChange={val => setMultiValue(Array.isArray(val) ? val : [])} multiSelect size="md" ariaLabel="Multi select group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />}>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-                {/* Toolbar (no selection) */}
-                <Box>
-                  <Text mb="xs" fw={700}>Toolbar (No Selection)</Text>
-                  <ButtonGroup toolbar size="md" ariaLabel="Toolbar group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />} onClick={() => alert('Edit clicked')}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />} onClick={() => alert('Photo clicked')}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />} onClick={() => alert('Delete clicked')}>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-                {/* Icon Only */}
-                <Box>
-                  <Text mb="xs" fw={700}>Icon Only</Text>
-                  <Stack gap="xs" align="start">
-                    <ButtonGroup size="sm" ariaLabel="Icon only group small">
-                      <ButtonGroup.Button value="edit" leftSection={<IconEdit size={16} />} iconOnly />
-                      <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={16} />} iconOnly />
-                      <ButtonGroup.Button value="delete" leftSection={<IconTrash size={16} />} iconOnly />
-                    </ButtonGroup>
-                    <ButtonGroup size="md" ariaLabel="Icon only group medium">
-                      <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />} iconOnly />
-                      <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />} iconOnly />
-                      <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />} iconOnly />
-                    </ButtonGroup>
-                    <ButtonGroup size="lg" ariaLabel="Icon only group large">
-                      <ButtonGroup.Button value="edit" leftSection={<IconEdit size={20} />} iconOnly />
-                      <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={20} />} iconOnly />
-                      <ButtonGroup.Button value="delete" leftSection={<IconTrash size={20} />} iconOnly />
-                    </ButtonGroup>
+              <Grid.Col span={12}>
+                <Paper withBorder p="md" mt="lg" radius="md">
+                  <Title order={5} mb="md">
+                    ButtonGroup Variants
+                  </Title>
+                  <Stack gap="xl">
+                    {/* Single Select (Radio) */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Single Select (Radio)
+                      </Text>
+                      <ButtonGroup
+                        value={singleValue}
+                        onChange={(val) => setSingleValue(typeof val === 'string' ? val : '')}
+                        size="md"
+                        ariaLabel="Single select group"
+                      >
+                        <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />}>
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
+                    {/* Multi Select (Checkbox) */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Multi Select (Checkbox)
+                      </Text>
+                      <ButtonGroup
+                        value={multiValue}
+                        onChange={(val) => setMultiValue(Array.isArray(val) ? val : [])}
+                        multiSelect
+                        size="md"
+                        ariaLabel="Multi select group"
+                      >
+                        <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />}>
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
+                    {/* Toolbar (no selection) */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Toolbar (No Selection)
+                      </Text>
+                      <ButtonGroup toolbar size="md" ariaLabel="Toolbar group">
+                        <ButtonGroup.Button
+                          value="edit"
+                          leftSection={<IconEdit size={18} />}
+                          onClick={() => alert('Edit clicked')}
+                        >
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button
+                          value="photo"
+                          leftSection={<IconPhoto size={18} />}
+                          onClick={() => alert('Photo clicked')}
+                        >
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button
+                          value="delete"
+                          leftSection={<IconTrash size={18} />}
+                          onClick={() => alert('Delete clicked')}
+                        >
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
+                    {/* Icon Only */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Icon Only
+                      </Text>
+                      <Stack gap="xs" align="start">
+                        <ButtonGroup size="sm" ariaLabel="Icon only group small">
+                          <ButtonGroup.Button
+                            value="edit"
+                            leftSection={<IconEdit size={16} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="photo"
+                            leftSection={<IconPhoto size={16} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="delete"
+                            leftSection={<IconTrash size={16} />}
+                            iconOnly
+                          />
+                        </ButtonGroup>
+                        <ButtonGroup size="md" ariaLabel="Icon only group medium">
+                          <ButtonGroup.Button
+                            value="edit"
+                            leftSection={<IconEdit size={18} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="photo"
+                            leftSection={<IconPhoto size={18} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="delete"
+                            leftSection={<IconTrash size={18} />}
+                            iconOnly
+                          />
+                        </ButtonGroup>
+                        <ButtonGroup size="lg" ariaLabel="Icon only group large">
+                          <ButtonGroup.Button
+                            value="edit"
+                            leftSection={<IconEdit size={20} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="photo"
+                            leftSection={<IconPhoto size={20} />}
+                            iconOnly
+                          />
+                          <ButtonGroup.Button
+                            value="delete"
+                            leftSection={<IconTrash size={20} />}
+                            iconOnly
+                          />
+                        </ButtonGroup>
+                      </Stack>
+                    </Box>
+                    {/* Disabled State */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Disabled State
+                      </Text>
+                      <ButtonGroup
+                        value={singleValue}
+                        onChange={(val) => setSingleValue(typeof val === 'string' ? val : '')}
+                        size="md"
+                        ariaLabel="Disabled group"
+                      >
+                        <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button
+                          value="delete"
+                          leftSection={<IconTrash size={18} />}
+                          disabled
+                        >
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
+                    {/* Small Size */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Small Size
+                      </Text>
+                      <ButtonGroup
+                        value={singleValue}
+                        onChange={(val) => setSingleValue(typeof val === 'string' ? val : '')}
+                        size="sm"
+                        ariaLabel="Small size group"
+                      >
+                        <ButtonGroup.Button value="edit" leftSection={<IconEdit size={16} />}>
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={16} />}>
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="delete" leftSection={<IconTrash size={16} />}>
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
+                    {/* Large Size */}
+                    <Box>
+                      <Text mb="xs" fw={700}>
+                        Large Size
+                      </Text>
+                      <ButtonGroup
+                        value={singleValue}
+                        onChange={(val) => setSingleValue(typeof val === 'string' ? val : '')}
+                        size="lg"
+                        ariaLabel="Large size group"
+                      >
+                        <ButtonGroup.Button value="edit" leftSection={<IconEdit size={20} />}>
+                          Edit
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={20} />}>
+                          Photo
+                        </ButtonGroup.Button>
+                        <ButtonGroup.Button value="delete" leftSection={<IconTrash size={20} />}>
+                          Delete
+                        </ButtonGroup.Button>
+                      </ButtonGroup>
+                    </Box>
                   </Stack>
-                </Box>
-                {/* Disabled State */}
-                <Box>
-                  <Text mb="xs" fw={700}>Disabled State</Text>
-                  <ButtonGroup value={singleValue} onChange={val => setSingleValue(typeof val === 'string' ? val : '')} size="md" ariaLabel="Disabled group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={18} />}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={18} />}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={18} />} disabled>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-                {/* Small Size */}
-                <Box>
-                  <Text mb="xs" fw={700}>Small Size</Text>
-                  <ButtonGroup value={singleValue} onChange={val => setSingleValue(typeof val === 'string' ? val : '')} size="sm" ariaLabel="Small size group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={16} />}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={16} />}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={16} />}>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-                {/* Large Size */}
-                <Box>
-                  <Text mb="xs" fw={700}>Large Size</Text>
-                  <ButtonGroup value={singleValue} onChange={val => setSingleValue(typeof val === 'string' ? val : '')} size="lg" ariaLabel="Large size group">
-                    <ButtonGroup.Button value="edit" leftSection={<IconEdit size={20} />}>Edit</ButtonGroup.Button>
-                    <ButtonGroup.Button value="photo" leftSection={<IconPhoto size={20} />}>Photo</ButtonGroup.Button>
-                    <ButtonGroup.Button value="delete" leftSection={<IconTrash size={20} />}>Delete</ButtonGroup.Button>
-                  </ButtonGroup>
-                </Box>
-              </Stack>
-            </Paper>
-          </Grid.Col>
+                </Paper>
+              </Grid.Col>
             </Box>
           </Grid.Col>
         </Grid>

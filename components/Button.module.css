@@ -22,10 +22,10 @@
   background-color: var(--mantine-color-cadet-4) !important;
 }
 [data-mantine-color-scheme='light'] .button[data-variant='outline']:focus-visible {
-  border: 2px solid var(--mantine-color-idexx-blue-4);
+  border: 2px solid var(--mantine-primary-color-4);
 }
 [data-mantine-color-scheme='dark'] .button[data-variant='outline']:focus-visible {
-  border: 2px solid var(--mantine-color-idexx-blue-4);
+  border: 2px solid var(--mantine-primary-color-4);
 }
 
 /* default button styles */
@@ -50,10 +50,10 @@
   background: var(--mantine-color-dark-5);
 }
 [data-mantine-color-scheme='light'] .button[data-variant='default']:focus-visible {
-  border: 2px solid var(--mantine-color-idexx-blue-4);
+  border: 2px solid var(--mantine-primary-color-4);
 }
 [data-mantine-color-scheme='dark'] .button[data-variant='default']:focus-visible {
-  border: 2px solid var(--mantine-color-idexx-blue-4);
+  border: 2px solid var(--mantine-primary-color-4);
 }
 
 /* Subtle button styles */
@@ -62,7 +62,7 @@
 }
 [data-mantine-color-scheme='dark'] .button[data-variant='subtle'] {
   font-weight: 400;
-  color: var(--mantine-color-idexx-blue-3);
+  color: var(--mantine-primary-color-3);
 }
 [data-mantine-color-scheme='light'] .button[data-variant='subtle']:hover {
   background: transparent !important;

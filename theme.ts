@@ -1,5 +1,37 @@
 'use client';
+
 import React from 'react';
+import { IconCircleFilled } from '@tabler/icons-react';
+import {
+  ActionIcon,
+  Badge,
+  Button,
+  Checkbox,
+  Chip,
+  createTheme,
+  Drawer,
+  Input,
+  MantineTheme,
+  NavLink,
+  Pagination,
+  PasswordInput,
+  Progress,
+  Radio,
+  Switch,
+  Tabs,
+  Text,
+} from '@mantine/core';
+import actionIconClasses from './components/ActionIcon.module.css';
+import badgeClasses from './components/Badge/Badge.module.css';
+import buttonClasses from './components/Button.module.css';
+import chipClasses from './components/Chip.module.css';
+import drawerClasses from './components/Drawer.module.css';
+import inputClasses from './components/Input.module.css';
+import navLinkClasses from './components/NavLink.module.css';
+import paginationClasses from './components/Pagination.module.css';
+import progressClasses from './components/Progress/Progress.module.css';
+import radioClasses from './components/Radio.module.css';
+import tabsClasses from './components/Tabs.module.css';
 
 declare module '@mantine/core' {
   export interface TextProps {
@@ -13,39 +45,6 @@ declare module '@mantine/core' {
     type?: 'primary' | 'secondary' | 'positive' | 'negative' | 'warning' | 'info';
   }
 }
-
-import {
-  createTheme,
-  MantineTheme,
-  Pagination,
-  PasswordInput,
-  NavLink,
-  Badge,
-  Input,
-  Radio,
-  Button,
-  Switch,
-  Checkbox,
-  Chip,
-  Progress,
-  ActionIcon,
-  Tabs,
-  Text,
-  Drawer
-} from '@mantine/core';
-import inputClasses from './components/Input.module.css';
-import buttonClasses from './components/Button.module.css';
-import radioClasses from './components/Radio.module.css';
-import paginationClasses from './components/Pagination.module.css';
-import progressClasses from './components/Progress/Progress.module.css';
-import actionIconClasses from './components/ActionIcon.module.css';
-import tabsClasses from './components/Tabs.module.css';
-import chipClasses from './components/Chip.module.css';
-import navLinkClasses from './components/NavLink.module.css';
-import badgeClasses from './components/Badge/Badge.module.css';
-import drawerClasses from './components/Drawer.module.css';
-
-import { IconCircleFilled } from '@tabler/icons-react';
 
 export const theme = createTheme({
   primaryColor: 'idexx-blue',
@@ -65,7 +64,7 @@ export const theme = createTheme({
       '#0347A1', // 8
       '#00337f', // 9 Darkest
     ],
-    'cadet': [
+    cadet: [
       '#bccfe3', // 0 Lightest
       '#87acd3', // 1
       '#538ac4', // 2
@@ -75,7 +74,7 @@ export const theme = createTheme({
       '#173756', // 6
       '#0f2941', // 7
       '#071b2c', // 8
-      '#010d18'  // 9 Darkest
+      '#010d18', // 9 Darkest
     ],
     dark: [
       '#D0D1D0', // 0 Lightest
@@ -152,7 +151,7 @@ export const theme = createTheme({
   },
 
   radius: {
-    pill: '9999',
+    pill: '9999px',
   },
 
   fontFamily: 'Roboto, sans-serif',
@@ -298,7 +297,10 @@ export const theme = createTheme({
     Switch: Switch.extend({
       defaultProps: {
         color: 'green',
-        thumbIcon: React.createElement(IconCircleFilled, { size: 12, color: "var(--mantine-color-white)" }),
+        thumbIcon: React.createElement(IconCircleFilled, {
+          size: 12,
+          color: 'var(--mantine-color-white)',
+        }),
       },
     }),
     NavLink: NavLink.extend({

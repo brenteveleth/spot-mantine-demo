@@ -1,4 +1,4 @@
-import { Anchor, Box, Divider, Text, Title } from '@mantine/core';
+import { Anchor, Box, Code, Divider, Text, Title } from '@mantine/core';
 import ComponentsDemoLayout from '../components-demo-layout';
 
 export default function AnchorDemo() {
@@ -6,7 +6,7 @@ export default function AnchorDemo() {
     <ComponentsDemoLayout>
       <Title order={2}>Anchor</Title>
       <Text size="md" mt="xs" color="dimmed">
-        Description text goes here
+        Replaces <Code>{'<a href=""></a>'}</Code> in most instances
       </Text>
       <Divider my="lg" mb="xl" />
       <Box mt="md">

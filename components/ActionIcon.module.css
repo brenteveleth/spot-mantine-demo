@@ -1,3 +1,10 @@
+/* Primary actionIcon styles */
+[data-mantine-color-scheme='light'] .actionIcon[data-variant='filled']:hover {
+  background-color: var(--mantine-primary-color-5) !important;
+}
+[data-mantine-color-scheme='dark'] .actionIcon[data-variant='filled']:hover {
+  background-color: var(--mantine-primary-color-5) !important;
+}
 /* Outline actionIcon styles */
 [data-mantine-color-scheme='light'] .actionIcon[data-variant='outline'] {
   color: var(--mantine-color-text);
