@@ -154,7 +154,7 @@ export const theme = createTheme({
     pill: '9999px',
   },
 
-  fontFamily: 'Roboto, sans-serif',
+  fontFamily: 'Roboto, Sora, sans-serif',
   // scale: 1.06667,
 
   lineHeights: {
