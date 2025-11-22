@@ -20,12 +20,13 @@ import {
   Switch,
   Tabs,
   Text,
+  Tooltip,
 } from '@mantine/core';
-import actionIconClasses from './components/ActionIcon.module.css';
+import ActionIconClasses from './components/ActionIcon/ActionIcon.module.css';
 import badgeClasses from './components/Badge/Badge.module.css';
-import buttonClasses from './components/Button.module.css';
-import chipClasses from './components/Chip.module.css';
-import drawerClasses from './components/Drawer.module.css';
+import buttonClasses from './components/Button/Button.module.css';
+import chipClasses from './components/Chip/Chip.module.css';
+import drawerClasses from './components/Drawer/Drawer.module.css';
 import inputClasses from './components/Input.module.css';
 import navLinkClasses from './components/NavLink.module.css';
 import paginationClasses from './components/Pagination.module.css';
@@ -175,6 +176,14 @@ export const theme = createTheme({
   },
 
   components: {
+    ActionIcon: ActionIcon.extend({
+      defaultProps: {
+        radius: 'pill',
+      },
+      classNames: {
+        root: ActionIconClasses.actionIcon,
+      },
+    }),
     Drawer: Drawer.extend({
       classNames: {
         body: drawerClasses.body,
@@ -240,16 +249,6 @@ export const theme = createTheme({
     Input: Input.extend({
       classNames: {
         input: inputClasses.input,
-      },
-    }),
-    ActionIcon: ActionIcon.extend({
-      defaultProps: {
-        radius: 'xl',
-        size: 'lg',
-        variant: 'default',
-      },
-      classNames: {
-        root: actionIconClasses.actionIcon,
       },
     }),
     PasswordInput: PasswordInput.extend({
@@ -358,6 +357,13 @@ export const theme = createTheme({
       classNames: {
         control: paginationClasses.control,
         root: paginationClasses.root,
+      },
+    }),
+    Tooltip: Tooltip.extend({
+      defaultProps: {
+        radius: 'md',
+        color: 'dark',
+        withArrow: false,
       },
     }),
     Progress: Progress.extend({

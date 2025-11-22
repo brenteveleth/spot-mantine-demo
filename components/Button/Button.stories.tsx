@@ -1,29 +1,32 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconCircleFilled } from '@tabler/icons-react';
+import { IconArrowRight, IconSend } from '@tabler/icons-react';
 import { Button } from '@mantine/core';
 
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+  title: 'Actions/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: ['filled', 'outline', 'light', 'subtle'] },
+    variant: { control: false, table: { disable: true } },
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
+    disabled: { control: 'boolean' },
     loading: { control: 'boolean' },
     fullWidth: { control: 'boolean' },
     leftSection: {
       control: 'select',
-      options: {
+      options: ['None', 'Icon'],
+      mapping: {
         None: undefined,
-        Icon: <IconCircleFilled size={16} />,
+        Icon: <IconSend size={16} />,
       },
     },
     rightSection: {
       control: 'select',
-      options: {
+      options: ['None', 'Icon'],
+      mapping: {
         None: undefined,
-        Icon: <IconCircleFilled size={16} />,
+        Icon: <IconArrowRight size={16} />,
       },
     },
   },
@@ -32,38 +35,46 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Filled: Story = {
+export const Default: Story = {
   args: {
-    children: 'Filled Button',
+    children: 'Button',
     size: 'md',
     loading: false,
     fullWidth: false,
+    variant: 'default',
+    disabled: false,
+  },
+};
+
+export const Filled: Story = {
+  args: {
+    children: 'Button',
+    size: 'md',
+    loading: false,
+    fullWidth: false,
+    variant: 'filled',
+    disabled: false,
   },
 };
 
 export const Outline: Story = {
   args: {
-    children: 'Outline Button',
+    children: 'Button',
     size: 'md',
     loading: false,
     fullWidth: false,
+    variant: 'outline',
+    disabled: false,
   },
 };
 
-export const Light: Story = {
+export const Link: Story = {
   args: {
-    children: 'Light Button',
+    children: 'Button',
     size: 'md',
     loading: false,
     fullWidth: false,
-  },
-};
-
-export const Subtle: Story = {
-  args: {
-    children: 'Subtle Button',
-    size: 'md',
-    loading: false,
-    fullWidth: false,
+    variant: 'subtle',
+    disabled: false,
   },
 };

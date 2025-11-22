@@ -18,6 +18,7 @@ const components = [
   // 'Group',
   // 'Image',
   'Loader',
+  'Menu',
   'NavLink',
   'NumberInput',
   'Pagination',
@@ -25,6 +26,7 @@ const components = [
   'PasswordInput',
   'PinInput',
   'Radio',
+  'Popover',
   'ProgressBar',
   'Search',
   'Select',
@@ -34,6 +36,7 @@ const components = [
   'Textarea',
   'TextInput',
   'Title',
+  'Tooltip',
 ].sort();
 
 export default function ComponentsDemoLayout({ children }: { children: ReactNode }) {
@@ -56,6 +59,31 @@ export default function ComponentsDemoLayout({ children }: { children: ReactNode
           {components.map((name) => (
             <NavLink key={name} label={name} component={Link} href={`/${name}`} />
           ))}
+          {/* Navigation */}
+          <NavLink label="Navigation" variant="section" />
+          <NavLink label="ActionIcon" component={Link} href="/ActionIcon" />
+          <NavLink label="Anchor" component={Link} href="/Anchor" />
+          <NavLink label="Button" component={Link} href="/Button" />
+          <NavLink label="NavLink" component={Link} href="/NavLink" />
+          <NavLink label="Pagination" component={Link} href="/Pagination" />
+          <NavLink label="Tabs" component={Link} href="/Tabs" />
+          {/* Display */}
+          <NavLink label="Display" variant="section" />
+          <NavLink label="Avatar" component={Link} href="/Avatar" />
+          <NavLink label="Badge" component={Link} href="/Badge" />
+          <NavLink label="Card" component={Link} href="/Card" />
+          {/* Feedback */}
+          <NavLink label="Feedback" variant="section" />
+          <NavLink label="Loader" component={Link} href="/Loader" />
+          <NavLink label="Progress" component={Link} href="/Progress" />
+          {/* Layout */}
+          <NavLink label="Layout" variant="section" />
+          {/* Input */}
+          <NavLink label="Input" variant="section" />
+          {/* Typography */}
+          <NavLink label="Typography" variant="section" />
+          {/* Misc. */}
+          <NavLink label="Misc." variant="section" />
         </Stack>
       </AppShell.Navbar>
       <AppShell.Main className="main-content">{children}</AppShell.Main>

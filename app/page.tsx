@@ -34,6 +34,7 @@ import {
   Paper,
   PasswordInput,
   PinInput,
+  Popover,
   Radio,
   RadioGroup,
   Select,
@@ -183,7 +184,7 @@ export default function HomePage() {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Main className="main-content">
+      <AppShell.Main>
         <Grid>
           <Grid.Col span={12} pl={240} pr={240}>
             <Text mt="sm" c="dimmed">
@@ -554,6 +555,18 @@ export default function HomePage() {
                   ></Badge>
                 </Group>
                 <Space h="lg" />
+                <Group>
+                  <Popover width={200} position="bottom" withArrow shadow="md">
+                    <Popover.Target>
+                      <Button>Toggle popover</Button>
+                    </Popover.Target>
+                    <Popover.Dropdown>
+                      <Text size="xs">
+                        This is uncontrolled popover, it is opened when button is clicked
+                      </Text>
+                    </Popover.Dropdown>
+                  </Popover>
+                </Group>
               </Paper>
 
               {submittedData && (
@@ -569,6 +582,26 @@ export default function HomePage() {
                   <Text>Consent to contact: {submittedData.consent ? 'Yes' : 'No'}</Text>
                 </Card>
               )}
+            </Box>
+            <Box>
+              <Group>
+                <Button size="sm">Submit</Button>
+                <ActionIcon size="md">
+                  <IconSend2 size={16} />
+                </ActionIcon>
+              </Group>
+              <Group>
+                <Button size="md">Submit</Button>
+                <ActionIcon size="lg">
+                  <IconSend2 size={20} />
+                </ActionIcon>
+              </Group>
+              <Group>
+                <Button size="lg">Submit</Button>
+                <ActionIcon size="xl">
+                  <IconSend2 size={28} />
+                </ActionIcon>
+              </Group>
             </Box>
           </Grid.Col>
           <Grid.Col span={6}>
