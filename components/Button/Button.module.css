@@ -1,4 +1,37 @@
 /* Primary button styles */
+.button {
+  --button-height-xs: 24px;
+  --button-height-sm: 28px;
+  --button-height-md: 35px;
+  --button-height-lg: 45px;
+  --button-height-xl: 52px;
+}
+.button[data-size='xs'] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.button[data-size='sm'] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.button[data-size='md'] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.button[data-size='lg'] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.button[data-size='xl'] {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.mantine-button-section[data-position='left'] {
+  margin-right: 8px;
+}
+.mantine-button-section[data-position='right'] {
+  margin-left: 8px;
+}
 [data-mantine-color-scheme='light'] .button[data-variant='primary']:hover:not(:disabled) {
   background-color: var(--mantine-primary-color-5);
 }

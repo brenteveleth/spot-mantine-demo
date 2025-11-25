@@ -173,14 +173,14 @@ export const theme = createTheme({
     xs: '0.75rem',
     sm: '0.84375rem',
     md: '15px', // Set the base font size to 15px
-    lg: '1.1875rem',
+    lg: '1.125rem',
     xl: '1.3125rem',
   },
   lineHeights: {
     xs: '1.5',
     sm: '1.4075',
     md: '1.6',
-    lg: '1.395',
+    lg: '1.5',
     xl: '1.3334',
   },
   headings: {

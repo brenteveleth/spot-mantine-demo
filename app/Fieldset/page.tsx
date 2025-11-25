@@ -211,10 +211,10 @@ export default function FieldsetDemo() {
               {...form.getInputProps('consent', { type: 'checkbox' })}
             />
             <Group grow gap="md" mt="xl">
-              <Button variant="default" radius="xl" onClick={() => form.reset()}>
+              <Button variant="default" size="md" onClick={() => form.reset()}>
                 Cancel
               </Button>
-              <Button variant="primary" type="submit" radius="xl">
+              <Button variant="primary" type="submit" size="md">
                 Submit
               </Button>
             </Group>

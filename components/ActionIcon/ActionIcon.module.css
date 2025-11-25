@@ -1,3 +1,11 @@
+.actionIcon {
+  --ai-size-xs: 24px;
+  --ai-size-sm: 28px;
+  --ai-size-md: 35px;
+  --ai-size-lg: 45px;
+  --ai-size-xl: 52px;
+}
+
 /* Primary actionIcon styles */
 [data-mantine-color-scheme='light'] .actionIcon[data-variant='filled']:hover:not(:disabled) {
   background-color: var(--mantine-primary-color-5) !important;

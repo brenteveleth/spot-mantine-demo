@@ -70,6 +70,12 @@ export default function ComponentsDemoLayout({ children }: { children: ReactNode
           <NavLink label="Anchor" component={Link} href="/Anchor" active={pathname === '/Anchor'} />
           <NavLink label="Button" component={Link} href="/Button" active={pathname === '/Button'} />
           <NavLink
+            label="SplitButton"
+            component={Link}
+            href="/SplitButton"
+            active={pathname === '/SplitButton'}
+          />
+          <NavLink
             label="NavLink"
             component={Link}
             href="/NavLink"
