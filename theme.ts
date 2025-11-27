@@ -224,6 +224,7 @@ export const theme = createTheme({
       defaultProps: {
         radius: 'pill',
         variant: 'default',
+        size: 'md',
       },
       styles: (theme, params) => ({
         root: {

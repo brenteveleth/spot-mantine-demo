@@ -1,4 +1,4 @@
-import { Box, Divider, PasswordInput, Text, Title } from '@mantine/core';
+import { Alert, Box, Divider, PasswordInput, Text, Title } from '@mantine/core';
 import ComponentsDemoLayout from '../components-demo-layout';
 
 export default function PasswordInputDemo() {
@@ -17,6 +17,9 @@ export default function PasswordInputDemo() {
           mt="lg"
           w="240px"
         />
+        <Alert title="Note" color="orange" mt="lg">
+          PasswordInput needs the Spot icon applied
+        </Alert>
       </Box>
     </ComponentsDemoLayout>
   );

@@ -1,17 +1,35 @@
 'use client';
 
 import { useState } from 'react';
+// import {
+//   IconAdjustments,
+//   IconCalendar,
+//   IconChevronLeft,
+//   IconEdit,
+//   IconMessageCircle,
+//   IconPhoto,
+//   IconSend2,
+//   IconSettings,
+//   IconTrash,
+// } from '@tabler/icons-react';
 import {
-  IconAdjustments,
+  IconAdd,
+  IconAddAUser,
+  IconAlertNotification,
+  IconBrightness,
   IconCalendar,
-  IconChevronLeft,
+  IconCancel,
+  IconControls,
+  IconDelete,
   IconEdit,
-  IconMessageCircle,
-  IconPhoto,
-  IconSend2,
+  IconMoon,
+  IconNext,
+  IconPaperclip,
+  IconPrevious,
   IconSettings,
-  IconTrash,
-} from '@tabler/icons-react';
+  IconTimeClock,
+} from 'spot-icons-proto';
+// If your package name is different, use that name here!
 import {
   ActionIcon,
   Anchor,
@@ -49,6 +67,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
+import { Icon } from '@/components/Badge/Badge.stories';
 import { ActionToggle } from '../components/ActionToggle/ActionToggle';
 import { Badge } from '../components/Badge/Badge';
 import PhoneNumberInput from '../components/PhoneNumberInput/PhoneNumberInput';
@@ -223,6 +242,21 @@ export default function HomePage() {
                     12px/18px • Roboto Regular
                   </Text>
                 </Box>
+                <Group align="center" mt="md" justify="space-between">
+                  <IconTimeClock />
+                  <IconSettings />
+                  <IconPrevious />
+                  <IconPaperclip />
+                  <IconNext />
+                  <IconEdit />
+                  <IconDelete />
+                  <IconControls />
+                  <IconCancel />
+                  <IconCalendar />
+                  <IconAlertNotification />
+                  <IconAdd />
+                  <IconAddAUser />
+                </Group>
               </Stack>
             </Paper>
           </Grid.Col>
@@ -586,19 +620,19 @@ export default function HomePage() {
               <Group>
                 <Button size="sm">Submit</Button>
                 <ActionIcon size="md">
-                  <IconSend2 size={16} />
+                  <IconNext size={16} />
                 </ActionIcon>
               </Group>
               <Group>
                 <Button size="md">Submit</Button>
                 <ActionIcon size="lg">
-                  <IconSend2 size={20} />
+                  <IconNext size={20} />
                 </ActionIcon>
               </Group>
               <Group>
                 <Button size="lg">Submit</Button>
                 <ActionIcon size="xl">
-                  <IconSend2 size={28} />
+                  <IconNext size={28} />
                 </ActionIcon>
               </Group>
             </Box>
@@ -896,11 +930,7 @@ export default function HomePage() {
                       <NavLink label="Past Appointments" />
                       <NavLink label="Cancelled" />
                     </NavLink>
-                    <NavLink
-                      label="Messages"
-                      leftSection={<IconMessageCircle size={16} />}
-                      weight="heavy"
-                    >
+                    <NavLink label="Messages" leftSection={<IconAdd size={16} />} weight="heavy">
                       <NavLink label="Inbox" weight="heavy" />
                       <NavLink label="Sent" />
                       <NavLink label="Drafts" />
@@ -912,7 +942,7 @@ export default function HomePage() {
                       <NavLink label="Profile Photo" />
                       <NavLink label="Privacy Settings" />
                     </NavLink>
-                    <NavLink label="Preferences" leftSection={<IconAdjustments size={16} />}>
+                    <NavLink label="Preferences" leftSection={<IconControls size={16} />}>
                       <NavLink label="Notifications" />
                       <NavLink label="Display Settings" />
                       <NavLink label="Language" />
@@ -926,10 +956,10 @@ export default function HomePage() {
                 <Space h="xl" />
                 <Tabs radius="none" defaultValue="buttons">
                   <Tabs.List>
-                    <Tabs.Tab value="buttons" leftSection={<IconPhoto size={12} />}>
+                    <Tabs.Tab value="buttons" leftSection={<IconAddAUser size={12} />}>
                       Buttons
                     </Tabs.Tab>
-                    <Tabs.Tab value="action-icons" leftSection={<IconMessageCircle size={12} />}>
+                    <Tabs.Tab value="action-icons" leftSection={<IconTimeClock size={12} />}>
                       Action Icons
                     </Tabs.Tab>
                     <Tabs.Tab value="headings" leftSection={<IconSettings size={12} />}>
@@ -992,49 +1022,49 @@ export default function HomePage() {
                     <Space h="xl" />
                     <Group justify="left" gap="xs" role="presentation">
                       <ActionIcon variant="filled" aria-label="Send" size="md">
-                        <IconSend2 size={16} stroke={1.5} />
+                        <IconDelete size={16} />
                       </ActionIcon>
                       <ActionIcon variant="filled" aria-label="Send" size="lg">
-                        <IconSend2 size={20} stroke={1.5} />
+                        <IconDelete size={20} />
                       </ActionIcon>
                       <ActionIcon variant="filled" aria-label="Send" size="xl">
-                        <IconSend2 size={28} stroke={1.5} />
+                        <IconDelete size={28} />
                       </ActionIcon>
                     </Group>
                     <Space h="md" />
                     <Group justify="left" gap="xs" role="presentation">
-                      <ActionIcon variant="outline" aria-label="Adjustments" size="md">
-                        <IconAdjustments size={16} stroke={1.5} />
+                      <ActionIcon variant="outline" aria-label="Controls" size="md">
+                        <IconControls size={16} />
                       </ActionIcon>
-                      <ActionIcon variant="outline" aria-label="Adjustments" size="lg">
-                        <IconAdjustments size={20} stroke={1.5} />
+                      <ActionIcon variant="outline" aria-label="Controls" size="lg">
+                        <IconControls size={20} />
                       </ActionIcon>
-                      <ActionIcon variant="outline" aria-label="Adjustments" size="xl">
-                        <IconAdjustments size={28} stroke={1.5} />
+                      <ActionIcon variant="outline" aria-label="Controls" size="xl">
+                        <IconControls size={28} />
                       </ActionIcon>
                     </Group>
                     <Space h="md" />
                     <Group justify="left" gap="xs" role="presentation">
                       <ActionIcon aria-label="Back" size="md">
-                        <IconChevronLeft size={16} stroke={1.5} />
+                        <IconNext size={16} />
                       </ActionIcon>
                       <ActionIcon aria-label="Back" size="lg">
-                        <IconChevronLeft size={20} stroke={1.5} />
+                        <IconNext size={20} />
                       </ActionIcon>
                       <ActionIcon aria-label="Back" size="xl">
-                        <IconChevronLeft size={28} stroke={1.5} />
+                        <IconNext size={28} />
                       </ActionIcon>
                     </Group>
                     <Space h="md" />
                     <Group justify="left" gap="xs" role="presentation">
                       <ActionIcon variant="subtle" aria-label="Delete" size="md">
-                        <IconTrash size={16} stroke={1.5} />
+                        <IconAlertNotification size={16} />
                       </ActionIcon>
                       <ActionIcon variant="subtle" aria-label="Delete" size="lg">
-                        <IconTrash size={20} stroke={1.5} />
+                        <IconAlertNotification size={20} />
                       </ActionIcon>
                       <ActionIcon variant="subtle" aria-label="Delete" size="xl">
-                        <IconTrash size={28} stroke={1.5} />
+                        <IconAlertNotification size={28} />
                       </ActionIcon>
                     </Group>
                   </Tabs.Panel>
