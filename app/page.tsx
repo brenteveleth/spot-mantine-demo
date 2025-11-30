@@ -1,17 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-// import {
-//   IconAdjustments,
-//   IconCalendar,
-//   IconChevronLeft,
-//   IconEdit,
-//   IconMessageCircle,
-//   IconPhoto,
-//   IconSend2,
-//   IconSettings,
-//   IconTrash,
-// } from '@tabler/icons-react';
 import {
   IconAdd,
   IconAddAUser,
@@ -22,11 +11,13 @@ import {
   IconControls,
   IconDelete,
   IconEdit,
+  IconHide,
   IconMoon,
   IconNext,
   IconPaperclip,
   IconPrevious,
   IconSettings,
+  IconShow,
   IconTimeClock,
 } from 'spot-icons-proto';
 // If your package name is different, use that name here!
@@ -50,7 +41,6 @@ import {
   NumberInput,
   Pagination,
   Paper,
-  PasswordInput,
   PinInput,
   Popover,
   Radio,
@@ -67,9 +57,9 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
-import { Icon } from '@/components/Badge/Badge.stories';
 import { ActionToggle } from '../components/ActionToggle/ActionToggle';
 import { Badge } from '../components/Badge/Badge';
+import PasswordInput from '../components/PasswordInput/PasswordInput';
 import PhoneNumberInput from '../components/PhoneNumberInput/PhoneNumberInput';
 import { ProgressBar } from '../components/Progress/ProgressBar';
 import { SpotModal } from '../components/SpotModal/SpotModal';
@@ -243,7 +233,9 @@ export default function HomePage() {
                   </Text>
                 </Box>
                 <Group align="center" mt="md" justify="space-between">
+                  <IconAdd title="Test" />
                   <IconTimeClock />
+                  <IconAdd />
                   <IconSettings />
                   <IconPrevious />
                   <IconPaperclip />
@@ -254,8 +246,11 @@ export default function HomePage() {
                   <IconCancel />
                   <IconCalendar />
                   <IconAlertNotification />
-                  <IconAdd />
                   <IconAddAUser />
+                  <IconBrightness />
+                  <IconMoon />
+                  <IconShow />
+                  <IconHide />
                 </Group>
               </Stack>
             </Paper>
@@ -956,13 +951,13 @@ export default function HomePage() {
                 <Space h="xl" />
                 <Tabs radius="none" defaultValue="buttons">
                   <Tabs.List>
-                    <Tabs.Tab value="buttons" leftSection={<IconAddAUser size={12} />}>
+                    <Tabs.Tab value="buttons" leftSection={<IconAddAUser size={16} />}>
                       Buttons
                     </Tabs.Tab>
-                    <Tabs.Tab value="action-icons" leftSection={<IconTimeClock size={12} />}>
+                    <Tabs.Tab value="action-icons" leftSection={<IconTimeClock size={16} />}>
                       Action Icons
                     </Tabs.Tab>
-                    <Tabs.Tab value="headings" leftSection={<IconSettings size={12} />}>
+                    <Tabs.Tab value="headings" leftSection={<IconSettings size={16} />}>
                       Headings
                     </Tabs.Tab>
                   </Tabs.List>

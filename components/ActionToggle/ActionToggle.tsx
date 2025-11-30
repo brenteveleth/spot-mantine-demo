@@ -1,11 +1,17 @@
 import cx from 'clsx';
-import { IconBrightness, IconMoon } from 'my-icon-library';
+import { IconBrightness, IconMoon } from 'spot-icons-proto';
 import { ActionIcon, Group, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
+import { useState, useEffect } from 'react';
 import classes from './ActionToggle.module.css';
 
 export function ActionToggle() {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <Group justify="center">
@@ -16,8 +22,12 @@ export function ActionToggle() {
         radius="md"
         aria-label="Toggle color scheme"
       >
-        <IconBrightness className={cx(classes.icon, classes.light)} />
-        <IconMoon className={cx(classes.icon, classes.dark)} />
+        {mounted &&
+          (computedColorScheme === 'light' ? (
+            <IconBrightness className={classes.icon} />
+          ) : (
+            <IconMoon className={classes.icon} />
+          ))}
       </ActionIcon>
     </Group>
   );

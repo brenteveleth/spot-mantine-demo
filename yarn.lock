@@ -6093,6 +6093,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "1.0.0"
   resolved "file:../../GitHub/spot-icons-proto"
   dependencies:
+    "@svgr/core" "^8.1.0"
+    "@svgr/plugin-jsx" "^8.1.0"
+    "@svgr/plugin-prettier" "^8.1.0"
+    "@svgr/plugin-svgo" "^8.1.0"
     react ">=16.8.0"
     react-dom "^19.2.0"
 

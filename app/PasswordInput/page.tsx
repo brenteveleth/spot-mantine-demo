@@ -1,4 +1,5 @@
-import { Alert, Box, Divider, PasswordInput, Text, Title } from '@mantine/core';
+import { Alert, Box, Divider, Text, Title } from '@mantine/core';
+import PasswordInput from '../../components/PasswordInput/PasswordInput';
 import ComponentsDemoLayout from '../components-demo-layout';
 
 export default function PasswordInputDemo() {

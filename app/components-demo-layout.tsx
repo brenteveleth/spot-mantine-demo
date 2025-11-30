@@ -7,39 +7,6 @@ import { usePathname } from 'next/navigation'; // Import the hook
 import { AppShell, Box, Group, NavLink, Space, Stack, Title } from '@mantine/core';
 import { ActionToggle } from '../components/ActionToggle/ActionToggle';
 
-const components = [
-  'ActionIcon',
-  'Anchor',
-  'Badge',
-  'Button',
-  'Card',
-  'Checkbox',
-  'Drawer',
-  'Fieldset',
-  // 'Group',
-  // 'Image',
-  'Loader',
-  'Menu',
-  'NavLink',
-  'NumberInput',
-  'Pagination',
-  'Paper',
-  'PasswordInput',
-  'PinInput',
-  'Radio',
-  'Popover',
-  'ProgressBar',
-  'Search',
-  'Select',
-  'Switch',
-  'Tabs',
-  'Text',
-  'Textarea',
-  'TextInput',
-  'Title',
-  'Tooltip',
-].sort();
-
 export default function ComponentsDemoLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname(); // Get the current path
 
@@ -129,6 +96,12 @@ export default function ComponentsDemoLayout({ children }: { children: ReactNode
             component={Link}
             href="/PasswordInput"
             active={pathname === '/PasswordInput'}
+          />
+          <NavLink
+            label="PhoneNumberInput"
+            component={Link}
+            href="/PhoneNumberInput"
+            active={pathname === '/PhoneNumberInput'}
           />
           <NavLink
             label="PinInput"

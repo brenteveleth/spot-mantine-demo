@@ -6,6 +6,7 @@
 'use client';
 
 import React from 'react';
+import { IconShow, IconHide } from 'spot-icons-proto';
 import { IconCircleFilled } from '@tabler/icons-react';
 import {
   ActionIcon,

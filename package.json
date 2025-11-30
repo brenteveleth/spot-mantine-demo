@@ -29,7 +29,8 @@
     "next": "15.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-imask": "^7.6.1"
+    "react-imask": "^7.6.1",
+    "spot-icons-proto": "file:../../GitHub/spot-icons-proto/spot-icons-proto-1.0.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
