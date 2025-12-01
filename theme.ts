@@ -6,12 +6,12 @@
 'use client';
 
 import React from 'react';
-import { IconShow, IconHide } from 'spot-icons-proto';
 import { IconCircleFilled } from '@tabler/icons-react';
 import {
   ActionIcon,
   Badge,
   Button,
+  Card,
   Checkbox,
   Chip,
   createTheme,
@@ -243,6 +243,15 @@ export const theme = createTheme({
       }),
       classNames: {
         root: buttonClasses.button,
+      },
+    }),
+
+    // Card component styles //
+    Card: Card.extend({
+      defaultProps: {
+        radius: 'md',
+        shadow: 'sm',
+        component: 'a',
       },
     }),
 

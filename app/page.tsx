@@ -1075,6 +1075,7 @@ export default function HomePage() {
                 </Tabs>
               </Paper>
             </Box>
+            <Card component="a">Hello world</Card>
           </Grid.Col>
         </Grid>
       </AppShell.Main>
