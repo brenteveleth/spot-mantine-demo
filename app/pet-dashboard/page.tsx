@@ -4,9 +4,11 @@ import {
   IconCalendar,
   IconChevronRight,
   IconCirclePlus,
+  IconCirclePlusFilled,
   IconClipboard,
   IconClock,
   IconHome,
+  IconHomeFilled,
   IconInfoCircle,
   IconMapPin,
   IconMedicalCross,
@@ -27,6 +29,7 @@ import {
   Divider,
   Group,
   Image,
+  ScrollArea,
   Stack,
   Text,
   Title,
@@ -39,7 +42,7 @@ const mockData = {
     {
       id: 1,
       name: 'Bella',
-      breed: 'Mixed breed',
+      breed: 'Labrador Retriever',
       image: '/images/pet-bella.jpg',
       complianceScore: 100,
       hasAlerts: true,
@@ -92,44 +95,48 @@ export default function PetDashboardPage() {
             <Title order={5} c="white" mb="md">
               My Pets
             </Title>
-            <Group gap="md" align="stretch">
-              {mockData.pets.map((pet) => (
-                <Card
-                  key={pet.id}
-                  radius="md"
-                  p={0}
-                  style={{
-                    flex: 1,
-                    border: '2px solid white',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => console.log(`Pet ${pet.name} clicked`)}
-                >
-                  <Card.Section>
-                    <Image src={pet.image} height={172} alt={pet.name} fit="cover" />
-                  </Card.Section>
-                  <Group justify="space-between" p="sm" align="flex-start">
-                    <Box>
-                      <Title order={4} size="h5">
-                        {pet.name}
-                      </Title>
-                      <Text size="sm" c="dimmed">
-                        {pet.breed}
-                      </Text>
-                    </Box>
-                    {pet.complianceScore === 100 && (
-                      <Image
-                        src="/images/compliance-badge-100.svg"
-                        alt="100% Compliant"
-                        w={40}
-                        h={53}
-                      />
-                    )}
-                  </Group>
-                </Card>
-              ))}
-            </Group>
+            {/* Horizontal ScrollArea for pet cards */}
+            <ScrollArea type="scroll" scrollbarSize={8} offsetScrollbars>
+              <Group gap="md" align="stretch" wrap="nowrap" style={{ minWidth: '100%' }}>
+                {mockData.pets.map((pet) => (
+                  <Card
+                    key={pet.id}
+                    radius="md"
+                    p={0}
+                    style={{
+                      width: 340,
+                      border: '1px solid white',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                      flexShrink: 0,
+                    }}
+                    onClick={() => console.log(`Pet ${pet.name} clicked`)}
+                  >
+                    <Card.Section>
+                      <Image src={pet.image} height={172} alt={pet.name} fit="cover" />
+                    </Card.Section>
+                    <Group justify="space-between" p="sm" align="flex-start">
+                      <Box>
+                        <Title order={4} size="h5">
+                          {pet.name}
+                        </Title>
+                        <Text size="sm" c="dimmed">
+                          {pet.breed}
+                        </Text>
+                      </Box>
+                      {pet.complianceScore === 100 && (
+                        <Image
+                          src="/images/compliance-badge-100.svg"
+                          alt="100% Compliant"
+                          w={40}
+                          h={53}
+                        />
+                      )}
+                    </Group>
+                  </Card>
+                ))}
+              </Group>
+            </ScrollArea>
           </Box>
         </Stack>
       </Container>
@@ -146,7 +153,7 @@ export default function PetDashboardPage() {
                   variant="subtle"
                   size="sm"
                   fw="600"
-                  leftSection={<IconCirclePlus size={20} />}
+                  leftSection={<IconCirclePlusFilled size={20} />}
                 >
                   Book
                 </Button>
@@ -188,7 +195,7 @@ export default function PetDashboardPage() {
 
                     {/* Appointment Details */}
                     <Stack gap={6} style={{ flex: 1 }}>
-                      <Group gap="xs" wrap="nowrap">
+                      <Group gap="xs" wrap="nowrap" align="top">
                         <IconClock size={20} color="#97999b" />
                         <Text size="xs" style={{ lineHeight: 1.5 }}>
                           {mockData.appointment.time} | {mockData.appointment.dayOfWeek},{' '}
@@ -258,7 +265,7 @@ export default function PetDashboardPage() {
                         flexShrink: 0,
                       }}
                     >
-                      <IconMedicalCross size={24} color="#095dbe" />
+                      <IconStethoscope size={24} color="#095dbe" />
                     </Box>
                     <Box>
                       <Text fw={600} size="md">
@@ -294,10 +301,8 @@ export default function PetDashboardPage() {
           <Group justify="space-around" gap={0}>
             <Box className={styles.navItem} onClick={() => console.log('Home clicked')}>
               <Stack gap={4} align="center">
-                <IconHome size={24} color="#1e1f1f" />
-                <Text size="xs" c="#1e1f1f">
-                  Home
-                </Text>
+                <IconHomeFilled size={24} />
+                <Text size="xs">Home</Text>
               </Stack>
               <Box className={styles.activeIndicator} />
             </Box>
@@ -313,7 +318,7 @@ export default function PetDashboardPage() {
 
             <Box className={styles.navItem} onClick={() => console.log('Care clicked')}>
               <Stack gap={4} align="center">
-                <IconMedicalCross size={24} color="#737578" />
+                <IconClipboard size={24} color="#737578" />
                 <Text size="xs" c="#797a7c">
                   Care
                 </Text>
