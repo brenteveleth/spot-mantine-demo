@@ -14,6 +14,7 @@ import {
   Card,
   Checkbox,
   Chip,
+  colorsTuple,
   createTheme,
   Drawer,
   Input,
@@ -29,7 +30,9 @@ import {
   Text,
   Tooltip,
 } from '@mantine/core';
+
 import '@mantine/core/styles.css';
+
 import ActionIconClasses from './components/ActionIcon/ActionIcon.module.css';
 import badgeClasses from './components/Badge/Badge.module.css';
 import buttonClasses from './components/Button/Button.module.css';
@@ -56,13 +59,36 @@ declare module '@mantine/core' {
 }
 
 export const theme = createTheme({
-
   // Colors
   primaryColor: 'idexx-blue',
   primaryShade: 6,
   white: '#fff',
   black: '#0F1114',
   colors: {
+    vpYellow: [
+      '#fff8e1',
+      '#fdeece',
+      '#f7dca2',
+      '#f1c971',
+      '#ecb53f',
+      '#eaae2d',
+      '#e9a91c',
+      '#cf930d',
+      '#b88203',
+      '#a07000',
+    ],
+    uvcOrange: [
+      '#fff6e0',
+      '#ffebcb',
+      '#fed79b',
+      '#fbc167',
+      '#faae3b',
+      '#f9a11c',
+      '#f99c0b',
+      '#de8700',
+      '#c67700',
+      '#ac6600',
+    ],
     'idexx-blue': [
       '#E2F5FF', // 0 Lightest
       '#CDEDFF', // 1
@@ -161,12 +187,10 @@ export const theme = createTheme({
     ],
   },
 
-
   // Radius //
   radius: {
     pill: '9999px',
   },
-
 
   // Typography //
   fontFamily: 'Roboto, sans-serif',
@@ -207,7 +231,6 @@ export const theme = createTheme({
 
   // Component styles
   components: {
-
     // ActionIcon component styles //
     ActionIcon: ActionIcon.extend({
       defaultProps: {

@@ -1074,29 +1074,52 @@ export default function HomePage() {
               </Paper>
             </Box>
             <Card component="a">Hello world</Card>
-            <Space h="xl" />
-            <Card shadow="sm" padding="lg" radius="md" withBorder>
-              <Card.Section>
-                <Image
-                  src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2886"
-                  height={160}
-                  alt="Black and White Cat"
-                />
-              </Card.Section>
-
-              <Group justify="space-between" mt="md" mb="xs">
-                <Text fw={500}>Lulu</Text>
-                <Badge role="info">New Patient</Badge>
-              </Group>
-
-              <Text size="sm" c="dimmed">
-                Cats are curious, playful companions who bring joy and comfort to any home.
-              </Text>
-
-              <Button variant="outline" fullWidth mt="md">
-                Schedule appointment
-              </Button>
-            </Card>
+            <Grid>
+              <Grid.Col span={6}>
+                <Card component="a">Hello world</Card>
+              </Grid.Col>
+              <Grid.Col span={6}>
+                <Card
+                  shadow="sm"
+                  padding="lg"
+                  radius="lg"
+                  withBorder
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    minHeight: 321,
+                    width: 518,
+                    maxWidth: '100%',
+                  }}
+                >
+                  <Card.Section inheritPadding py="md">
+                    <Title order={3}>Card Title</Title>
+                  </Card.Section>
+                  <Card.Section
+                    style={{
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                      padding: 24,
+                    }}
+                  >
+                    <Text>Body Text</Text>
+                  </Card.Section>
+                  <Card.Section
+                    inheritPadding
+                    py="md"
+                    style={{
+                      marginTop: 'auto',
+                    }}
+                  >
+                    <Text size="sm" c="dimmed">
+                      Footer text
+                    </Text>
+                  </Card.Section>
+                </Card>
+              </Grid.Col>
+            </Grid>
           </Grid.Col>
         </Grid>
       </AppShell.Main>
