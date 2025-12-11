@@ -30,7 +30,7 @@
 
 .calendarBox {
   background-color: var(--mantine-primary-color-6);
-  border-radius: 8px;
+  border-radius: var(--mantine-radius-sm);
   padding: 4px;
   min-width: 56px;
   display: flex;
