@@ -309,31 +309,33 @@ function POEHomePage() {
             <Group justify="space-around" gap={0}>
               <Box className={styles.navItem} onClick={() => console.log('Home clicked')}>
                 <Stack gap={4} align="center">
-                  <IconHomeFilled size={24} />
-                  <Text size="xs">Home</Text>
+                  <IconHomeFilled size={24} color="var(--mantine-color-dark-7)" />
+                  <Text size="xs" c="var(--mantine-color-dark-7)">
+                    Home
+                  </Text>
                 </Stack>
                 <Box className={styles.activeIndicator} />
               </Box>
               <Box className={styles.navItem} onClick={() => console.log('Appointments clicked')}>
                 <Stack gap={4} align="center">
-                  <IconCalendar size={24} color="#737578" />
-                  <Text size="xs" c="#797a7c">
+                  <IconCalendar size={24} color="var(--mantine-color-dark-3)" />
+                  <Text size="xs" c="var(--mantine-color-dark-3)">
                     Appointments
                   </Text>
                 </Stack>
               </Box>
               <Box className={styles.navItem} onClick={() => console.log('Care clicked')}>
                 <Stack gap={4} align="center">
-                  <IconClipboard size={24} color="#737578" />
-                  <Text size="xs" c="#797a7c">
+                  <IconClipboard size={24} color="var(--mantine-color-dark-3)" />
+                  <Text size="xs" c="var(--mantine-color-dark-3)">
                     Care
                   </Text>
                 </Stack>
               </Box>
               <Box className={styles.navItem} onClick={() => console.log('More clicked')}>
                 <Stack gap={4} align="center">
-                  <IconDotsVertical size={24} color="#797a7c" />
-                  <Text size="xs" c="#797a7c">
+                  <IconDotsVertical size={24} color="var(--mantine-color-dark-3)" />
+                  <Text size="xs" c="var(--mantine-color-dark-3)">
                     More
                   </Text>
                 </Stack>
