@@ -6,7 +6,7 @@ import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/c
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
+  title: 'spot-mantine demo',
   description: 'I am using Mantine with Next.js!',
 };
 
@@ -17,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" {...mantineHtmlProps} data-theme="light">
       <head>
         <ColorSchemeScript defaultColorScheme="auto" forceColorScheme="light" />
+        <title>spot-mantine demo</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="shortcut icon" href="/favicon.svg" />
